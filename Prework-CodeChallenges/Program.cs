@@ -6,38 +6,39 @@ namespace Prework_CodeChallenges
     {
         static void Main(string[] args)
         {
-            int[] newArray = new int[5];
 
-            Console.WriteLine("Please input 5 numbers. Press 'ENTER' after each number.");
+   
+                Console.WriteLine("Please Enter a Year");
 
-            for (int i = 0; i < newArray.Length; i++)
-            {
-                newArray[i] = Convert.ToInt32(Console.ReadLine());
-            }
+                int year = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Please Enter the number that you want to check");
-            int num = Convert.ToInt32(Console.ReadLine());
 
-            int count = 0;
-
-            for (int x=0;x<5;x++)
-            {
-              
-
-                if (newArray[x] == num)
+                if (year % 4 == 0)
                 {
-                    count++;
+                    if (year % 100 == 0)
+                    {
+                        if (year % 400 == 0)
+                        {
+                            Console.WriteLine("{0} is a leap year.", year);
+                        }
+                        else
+                        {
+                            Console.WriteLine("{0} is not a leap year.", year);
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("{0} is a leap year.", year);
+                    }
+
                 }
-                
+                else
+                {
+                    Console.WriteLine("{0} is not a leap year.", year);
+                }
+
+                Console.ReadLine();
             }
-
-            var result = num * count;
-
-            Console.Write("the result is " +result);
-            Console.ReadLine();
-
-
-        }
 
 
     }
