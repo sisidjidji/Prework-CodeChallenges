@@ -6,39 +6,37 @@ namespace Prework_CodeChallenges
     {
         static void Main(string[] args)
         {
+            int[] newArray = new int[3];
 
-   
-                Console.WriteLine("Please Enter a Year");
+            Console.WriteLine("Please input  numbers. Press 'ENTER' after each number.");
+            var sum = 0;
+            var mult = 1;
 
-                int year = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < newArray.Length; i++)
+            {
+                newArray[i] = Convert.ToInt32(Console.ReadLine());
+                sum += newArray[i];
+                mult = mult * newArray[i];
 
-
-                if (year % 4 == 0)
-                {
-                    if (year % 100 == 0)
-                    {
-                        if (year % 400 == 0)
-                        {
-                            Console.WriteLine("{0} is a leap year.", year);
-                        }
-                        else
-                        {
-                            Console.WriteLine("{0} is not a leap year.", year);
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine("{0} is a leap year.", year);
-                    }
-
-                }
-                else
-                {
-                    Console.WriteLine("{0} is not a leap year.", year);
-                }
-
-                Console.ReadLine();
             }
+
+            if (sum == mult)
+            {
+                Console.WriteLine("the array you entered  is a perfect array");
+            }
+
+            else
+            {
+                Console.WriteLine("the array you entered is not a perfect array");
+            }
+
+            
+
+            
+            Console.ReadLine();
+
+
+        }
 
 
     }

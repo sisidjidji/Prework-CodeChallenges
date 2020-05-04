@@ -3,7 +3,9 @@
 ![code challenge1](/images/VsDebugConsole_C9x4DAYlQS.png)
 
 2. Given a year, report if it is a leap year.
-![code challenge1](/images/VsDebugConsole_y9VuAntOys.png)
+![code challenge2](/images/VsDebugConsole_y9VuAntOys.png)
 
 3.Problem Statement
 Given an array, return “Yes” if the sequence is considered a perfect sequence. Otherwise, return “No”
+![code challenge3](/images/VsDebugConsole_2Rd0U96Mrw.png)
+![code challenge3](/images/VsDebugConsole_B8plX5tn65.png)
