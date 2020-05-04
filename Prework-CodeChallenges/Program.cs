@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Prework_CodeChallenges
 {
@@ -6,38 +7,38 @@ namespace Prework_CodeChallenges
     {
         static void Main(string[] args)
         {
-            int[] newArray = new int[3];
 
-            Console.WriteLine("Please input  numbers. Press 'ENTER' after each number.");
-            var sum = 0;
-            var mult = 1;
+            Console.WriteLine("Please Enter the number of rows");
+            int rows = int.Parse(Console.ReadLine());
+            Console.WriteLine("Please Enter the number of columns");
+            int columns = int.Parse(Console.ReadLine());
 
-            for (int i = 0; i < newArray.Length; i++)
+            System.Random random = new System.Random();
+            int[,] newArray = new int[rows, columns];
+            for (int i = 0; i < rows; i++)
             {
-                newArray[i] = Convert.ToInt32(Console.ReadLine());
-                sum += newArray[i];
-                mult = mult * newArray[i];
+                for (int y = 0; y < columns; y++)
+                {
+                    int number = random.Next(0, 10);
 
+                    newArray[i, y] = number;
+
+                }
+            }
+            Console.WriteLine(string.Join(",",newArray.Cast<int>()));
+
+            int[] sum = new int [rows];
+            for (int x = 0; x < rows; x++)
+            {
+                for (int a = 0; a < columns; a++)
+                {
+                    sum[x] += newArray[x,a];
+                }
             }
 
-            if (sum == mult)
-            {
-                Console.WriteLine("the array you entered  is a perfect array");
-            }
+            Console.WriteLine(string.Join("," ,sum));
 
-            else
-            {
-                Console.WriteLine("the array you entered is not a perfect array");
-            }
-
-            
-
-            
-            Console.ReadLine();
-
-
+           
         }
-
-
     }
 }
